@@ -5,13 +5,14 @@ const app = express();
 const port = 3000;
 const API_URL = "https://secrets-api.appbrewery.com/";
 
-const myUsername = "Kate";
-const myPassword = "1234";
-const myAPIKey = "a4fa1794-146f-4da7-b66b-0c4c9ac00e30";
-const myBearerToken = "8e9633b2-7413-49f0-a123-c735ef46ff77";
+// Add your credentials below. First, you need to get credentials from the Secrets API: https://secrets-api.appbrewery.com
+const myUsername = "YOUR_USERNAME";
+const myPassword = "YOUR_PASSWORD";
+const myAPIKey = "YOUR_API_KEY";
+const myBearerToken = "YOUR_BEARER_TOKEN";
 
 app.get("/", (req, res) => {
-  res.render("index.ejs", { content: "API Response." });
+  res.render("index.ejs");
 });
 
 app.get("/noAuth", async (req, res) => {
